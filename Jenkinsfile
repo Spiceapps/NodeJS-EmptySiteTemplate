@@ -3,7 +3,9 @@ pipeline {
     node {
       label 'centos7'
     }
-
+  triggers {
+  pollSCM '* * * * *'
+}
   }
   stages {
     stage('checkout code') {
